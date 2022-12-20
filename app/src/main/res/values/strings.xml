@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fit-it</string>
+    <string name="logo_description">Logo Fit-it horizontal</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="acessar">Acessar</string>
+    <string name="nao_possui_conta">Não possui uma conta? Toque aqui para criar uma agora.</string>
+    <string name="possui_conta">Já tenho uma conta.</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="nome">Nome</string>
+    <string name="cidade">Cidade</string>
+    <string name="telefone">Telefone</string>
+</resources>

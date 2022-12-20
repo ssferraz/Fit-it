@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "700463599293",
+    "project_id": "fit-it-69524",
+    "storage_bucket": "fit-it-69524.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700463599293:android:3e7fc523e14e6ed54af1d4",
+        "android_client_info": {
+          "package_name": "com.github.ssferraz.fit_it"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700463599293-f8qfe1micu5k6bf1cudlb7p2egl5ju25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNCvm4TPX_NoxS_IyeHjBI5hF3GGTHLvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700463599293-f8qfe1micu5k6bf1cudlb7p2egl5ju25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
