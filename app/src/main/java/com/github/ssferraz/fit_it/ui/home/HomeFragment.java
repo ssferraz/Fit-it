@@ -1,4 +1,4 @@
-package com.github.ssferraz.fit_it.ui.cadastro;
+package com.github.ssferraz.fit_it.ui.home;
 
 import android.os.Bundle;
 
@@ -9,19 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.ssferraz.fit_it.R;
-import com.github.ssferraz.fit_it.databinding.FragmentCadastroBinding;
 
-public class CadastroFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    FragmentCadastroBinding binding;
-
-    public CadastroFragment() {
+    public HomeFragment() {
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cadastro, container, false);
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }

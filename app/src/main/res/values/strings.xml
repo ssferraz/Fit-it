@@ -10,4 +10,12 @@
     <string name="nome">Nome</string>
     <string name="cidade">Cidade</string>
     <string name="telefone">Telefone</string>
+    <string name="home">Home</string>
+    <string name="search">Explorar</string>
+    <string name="reserva">Minhas reservas</string>
+    <string name="configuracao">Configuração</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="explorarTitle">Explorar</string>
+    <string name="explorarSubtitle">Clinica Médica</string>
+
 </resources>
