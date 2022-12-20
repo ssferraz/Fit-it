@@ -18,9 +18,5 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-
-        //LoginFragment fragmento = new LoginFragment();
-        //getSupportFragmentManager().beginTransaction().add(R.id.container_fragment, fragmento).commit();
-
     }
 }
