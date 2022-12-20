@@ -1,4 +1,4 @@
-package com.github.ssferraz.fit_it.ui.cadastro;
+package com.github.ssferraz.fit_it.ui.reserva;
 
 import android.os.Bundle;
 
@@ -9,19 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.ssferraz.fit_it.R;
-import com.github.ssferraz.fit_it.databinding.FragmentCadastroBinding;
 
-public class CadastroFragment extends Fragment {
+public class ListaReservasFragment extends Fragment {
 
-    FragmentCadastroBinding binding;
-
-    public CadastroFragment() {
-
+    public ListaReservasFragment() {
+        // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cadastro, container, false);
+        return inflater.inflate(R.layout.fragment_lista_reservas, container, false);
     }
 }
