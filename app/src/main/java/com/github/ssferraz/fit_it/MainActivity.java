@@ -31,7 +31,5 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        LoginFragment fragmento = new LoginFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.container_fragment, fragmento).commit();
     }
 }

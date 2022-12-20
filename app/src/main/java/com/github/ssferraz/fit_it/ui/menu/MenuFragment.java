@@ -1,4 +1,4 @@
-package com.github.ssferraz.fit_it.ui.cadastro;
+package com.github.ssferraz.fit_it.ui.menu;
 
 import android.os.Bundle;
 
@@ -9,19 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.ssferraz.fit_it.R;
-import com.github.ssferraz.fit_it.databinding.FragmentCadastroBinding;
+import com.github.ssferraz.fit_it.databinding.FragmentMenuBinding;
 
-public class CadastroFragment extends Fragment {
+public class MenuFragment extends Fragment {
 
-    FragmentCadastroBinding binding;
+    FragmentMenuBinding binding;
 
-    public CadastroFragment() {
+    public MenuFragment() {
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cadastro, container, false);
+        return inflater.inflate(R.layout.fragment_menu, container, false);
     }
 }
