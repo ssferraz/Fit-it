@@ -48,4 +48,6 @@ public class FitItRepository {
         return clinicas;
     }
 
+
+
 }
