@@ -23,7 +23,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/editTextUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -43,7 +43,7 @@
             app:layout_constraintTop_toBottomOf="@+id/logo_horizontal" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -60,19 +60,21 @@
             android:textColorHint="#546E7A"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUsername"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnLogar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:background="@drawable/button_background_green"
             android:text="@string/acessar"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView"
@@ -82,7 +84,7 @@
             android:text="@string/nao_possui_conta"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/btnLogar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

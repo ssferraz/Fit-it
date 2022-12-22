@@ -16,6 +16,10 @@ public class Paciente {
         this.senha = senha;
     }
 
+    public Paciente(){
+
+    }
+
     public String getNome() {
         return nome;
     }

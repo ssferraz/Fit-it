@@ -14,8 +14,8 @@
     <string name="search">Pesquisar</string>
     <string name="reserva">Minhas reservas</string>
     <string name="configuracao">Configuração</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="explorarTitle">Explorar</string>
     <string name="explorarSubtitle">Clinicas Médicas</string>
+    <string name="settings">Configurações</string>
 
 </resources>
