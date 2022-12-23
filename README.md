@@ -1,4 +1,8 @@
-# Fit-it
+<p align="center">
+  <img src="./docs/logo_vertical.png" height="150" width="150" alt="Logo" />
+</p>
+
+<h1 align="center"></h1>
 Projeto avaliativo para disciplina de Programação para Dispositivos Móveis I
 
 ## Grupo
