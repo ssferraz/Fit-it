@@ -9,8 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.ssferraz.fit_it.R;
+import com.github.ssferraz.fit_it.ui.settings.SettingsFragment;
 
 public class ListaClinicasFragment extends Fragment {
+
+    public static ListaClinicasFragment newInstance() {
+        ListaClinicasFragment fragment = new ListaClinicasFragment();
+        return fragment;
+    }
 
     public ListaClinicasFragment() {
 

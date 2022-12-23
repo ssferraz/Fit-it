@@ -12,6 +12,11 @@ import com.github.ssferraz.fit_it.R;
 
 public class ListaReservasFragment extends Fragment {
 
+    public static ListaReservasFragment newInstance() {
+        ListaReservasFragment fragment = new ListaReservasFragment();
+        return fragment;
+    }
+
     public ListaReservasFragment() {
         // Required empty public constructor
     }
