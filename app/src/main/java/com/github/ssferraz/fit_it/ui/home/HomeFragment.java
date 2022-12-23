@@ -12,6 +12,11 @@ import com.github.ssferraz.fit_it.R;
 
 public class HomeFragment extends Fragment {
 
+    public static HomeFragment newInstance() {
+        HomeFragment fragment = new HomeFragment();
+        return fragment;
+    }
+
     public HomeFragment() {
 
     }

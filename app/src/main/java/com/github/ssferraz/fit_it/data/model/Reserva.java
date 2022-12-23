@@ -4,23 +4,23 @@ import java.util.Date;
 
 public class Reserva {
 
-    private int id;
+    private Long id;
     private String nome;
     private Date timestamp;
     private double valor;
 
-    public Reserva(int id, String nome, Date timestamp, double valor) {
+    public Reserva(Long id, String nome, Date timestamp, double valor) {
         this.id = id;
         this.nome = nome;
         this.timestamp = timestamp;
         this.valor = valor;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

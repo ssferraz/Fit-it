@@ -12,6 +12,11 @@ import com.github.ssferraz.fit_it.R;
 
 public class SettingsFragment extends Fragment {
 
+    public static SettingsFragment newInstance() {
+        SettingsFragment fragment = new SettingsFragment();
+        return fragment;
+    }
+
     public SettingsFragment() {
         // Required empty public constructor
     }

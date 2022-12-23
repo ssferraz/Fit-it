@@ -49,21 +49,17 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentLoginBinding.bind(view);
 
-        binding.textView.setOnClickListener(new View.OnClickListener() {
+        binding.btnLogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 paciente = new Paciente();
                 paciente.setEmail(binding.editTextUsername.getText().toString());
                 paciente.setSenha(binding.editTextPassword.getText().toString());
                 boolean retorno = viewModel.logar(paciente);
+
                 if (retorno == true){
                     NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                    navController.navigate(R.id.action_loginFragment_to_cadastroFragment);
-                    //NavHostFragment finalHost = NavHostFragment.create(R.navigation.menu_nav_graph);
-                    //getFragmentManager().beginTransaction()
-                    //        .replace(R.id.nav_host_fragment, finalHost)
-                    //       .setPrimaryNavigationFragment(finalHost) // this is the equivalent to app:defaultNavHost="true"
-                    //        .commit();
+                    navController.navigate(R.id.action_loginFragment_to_menuFragment);
                 }
             }
         });
