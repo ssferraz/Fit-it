@@ -151,6 +151,8 @@
             android:text="@string/possui_conta"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:onClick="toLogin"
+            android:clickable="true"
             app:layout_constraintTop_toBottomOf="@+id/btnCadastrar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.github.ssferraz.fit_it.ui.cadastro;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.github.ssferraz.fit_it.R;
 import com.github.ssferraz.fit_it.data.model.Paciente;
 import com.github.ssferraz.fit_it.databinding.FragmentCadastroBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class CadastroFragment extends Fragment {
 
@@ -44,15 +45,24 @@ public class CadastroFragment extends Fragment {
                 paciente.setSenha(binding.editTextPassword.getText().toString());
                 boolean retorno = viewModel.cadastrarPaciente(paciente);
                 if(retorno == true) {
-
-                    NavHostFragment finalHost = NavHostFragment.create(R.navigation.menu_nav_graph);
-                    getFragmentManager().beginTransaction()
-                            .replace(R.id.nav_host_fragment, finalHost)
-                            .setPrimaryNavigationFragment(finalHost) // this is the equivalent to app:defaultNavHost="true"
-                            .commit();
-                    //NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                    //navController.navigate(R.id.menu_home);
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "Cadastrado com sucesso!", Snackbar.LENGTH_LONG)
+                            .setActionTextColor(Color.BLUE)
+                            .show();
+                    NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                    navController.navigate(R.id.action_cadastroFragment_to_loginFragment);
+                } else{
+                    Snackbar.make(getActivity().findViewById(android.R.id.content), "Erro ao cadastrar!", Snackbar.LENGTH_LONG)
+                            .setActionTextColor(Color.RED)
+                            .show();
                 }
+            }
+        });
+
+        binding.textView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.action_cadastroFragment_to_loginFragment);
             }
         });
     }

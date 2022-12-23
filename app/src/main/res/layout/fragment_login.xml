@@ -84,7 +84,7 @@
             android:text="@string/nao_possui_conta"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:onClick="cadastrar"
+            android:onClick="toCadastro"
             android:clickable="true"
             app:layout_constraintTop_toBottomOf="@+id/btnLogar" />
 

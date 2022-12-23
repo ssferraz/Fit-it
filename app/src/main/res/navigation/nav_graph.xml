@@ -20,7 +20,11 @@
         android:id="@+id/cadastroFragment"
         android:name="com.github.ssferraz.fit_it.ui.cadastro.CadastroFragment"
         android:label="fragment_cadastro"
-        tools:layout="@layout/fragment_cadastro" />
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.github.ssferraz.fit_it.ui.menu.MenuFragment"
