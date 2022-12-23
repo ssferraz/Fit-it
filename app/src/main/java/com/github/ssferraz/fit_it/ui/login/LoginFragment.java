@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -58,6 +59,14 @@ public class LoginFragment extends Fragment {
                 if (retorno == true){
 
                 }
+            }
+        });
+
+        binding.textView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.action_loginFragment_to_cadastroFragment);
             }
         });
     }
