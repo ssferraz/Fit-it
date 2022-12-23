@@ -49,7 +49,7 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentLoginBinding.bind(view);
 
-        binding.btnLogar.setOnClickListener(new View.OnClickListener() {
+        binding.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 paciente = new Paciente();
@@ -57,7 +57,8 @@ public class LoginFragment extends Fragment {
                 paciente.setSenha(binding.editTextPassword.getText().toString());
                 boolean retorno = true; //viewModel.logar(paciente)
                 if (retorno == true){
-
+                    NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                    navController.navigate(R.id.action_loginFragment_to_cadastroFragment);
                 }
             }
         });

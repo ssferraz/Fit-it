@@ -24,6 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +68,7 @@ public class FitItRepository {
     }
 
     public void cadastrar(Paciente paciente) {
-        db.collection("usuarios")
+        db.collection("pacientes")
                 .add(paciente)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @SuppressLint("RestrictedApi")
