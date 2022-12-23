@@ -1,7 +1,6 @@
 package com.github.ssferraz.fit_it.data.model;
 
 public class Paciente {
-    private int id;
     private String nome;
     private String cidade;
     private String telefone;

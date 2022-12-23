@@ -4,6 +4,7 @@ import static androidx.fragment.app.FragmentManager.TAG;
 
 import android.annotation.SuppressLint;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
@@ -14,6 +15,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +30,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
 
 public class FitItRepository {
     private static FitItRepository fitItRepository;
@@ -34,6 +39,7 @@ public class FitItRepository {
     DatabaseReference documentReference;
     public static Task<QuerySnapshot> docRef;
     public List<Paciente> pacientes = new ArrayList<>();
+    public FirebaseAuth mAuth;
 
     public synchronized static FitItRepository getInstance() {
         if (fitItRepository == null) {
@@ -67,7 +73,7 @@ public class FitItRepository {
     }
 
     public void cadastrar(Paciente paciente) {
-        db.collection("usuarios")
+        db.collection("pacientes")
                 .add(paciente)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @SuppressLint("RestrictedApi")

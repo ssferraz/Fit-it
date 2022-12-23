@@ -7,8 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -38,6 +37,7 @@ public class LoginFragment extends Fragment {
     LoginViewModel viewModel;
     Paciente paciente;
 
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +55,15 @@ public class LoginFragment extends Fragment {
                 paciente = new Paciente();
                 paciente.setEmail(binding.editTextUsername.getText().toString());
                 paciente.setSenha(binding.editTextPassword.getText().toString());
-                boolean retorno = true; //viewModel.logar(paciente)
+                boolean retorno = viewModel.logar(paciente);
                 if (retorno == true){
-
+                    NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                    navController.navigate(R.id.action_loginFragment_to_cadastroFragment);
+                    //NavHostFragment finalHost = NavHostFragment.create(R.navigation.menu_nav_graph);
+                    //getFragmentManager().beginTransaction()
+                    //        .replace(R.id.nav_host_fragment, finalHost)
+                    //       .setPrimaryNavigationFragment(finalHost) // this is the equivalent to app:defaultNavHost="true"
+                    //        .commit();
                 }
             }
         });
@@ -75,42 +81,8 @@ public class LoginFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_login, container, false);
-
     }
 
-    public void SignIn(String email, String password){
-
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithCustomToken:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithCustomToken:failure", task.getException());
-                            Toast.makeText(getContext(), "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
-                        }
-                    }
-                });
-    }
-
-    public void Logout(){
-        FirebaseAuth.getInstance().signOut();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        //FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
-    }
 
 
 }
