@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.github.ssferraz.fit_it.R;
 import com.github.ssferraz.fit_it.data.model.Paciente;
@@ -43,8 +44,14 @@ public class CadastroFragment extends Fragment {
                 paciente.setSenha(binding.editTextPassword.getText().toString());
                 boolean retorno = viewModel.cadastrarPaciente(paciente);
                 if(retorno == true) {
-                    NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                    navController.navigate(R.id.menu_home);
+
+                    NavHostFragment finalHost = NavHostFragment.create(R.navigation.menu_nav_graph);
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.nav_host_fragment, finalHost)
+                            .setPrimaryNavigationFragment(finalHost) // this is the equivalent to app:defaultNavHost="true"
+                            .commit();
+                    //NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                    //navController.navigate(R.id.menu_home);
                 }
             }
         });

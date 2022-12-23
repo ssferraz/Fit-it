@@ -49,7 +49,7 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentLoginBinding.bind(view);
 
-        binding.btnLogar.setOnClickListener(new View.OnClickListener() {
+        binding.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 paciente = new Paciente();
