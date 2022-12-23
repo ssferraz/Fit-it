@@ -10,6 +10,10 @@ android {
         enabled = true
     }
 
+    lintOptions {
+        tasks.lint.enabled = false
+    }
+
     defaultConfig {
         applicationId "com.github.ssferraz.fit_it"
         minSdk 21
